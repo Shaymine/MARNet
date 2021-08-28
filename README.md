@@ -2,6 +2,11 @@
 Our open-source code for BackDoor Attack against Value-decomposition Cooperative Multi-Agent Reinforcement Learning. The code is based on the [RIIT repository](https://github.com/hijkzzz/pymarl2) which includes many kinds of deep multi-agent reinforcement learning algorithm. 
 We implement our backdoor attack code in this framework. 
 
+## Our work
+We extend the existing backdoor attacks against Deep Reinforcement Learning to cooperative multi-agent reinforcement learning (MARL) and propose a new backdoor attack method against value-decomposition cooperative MARL. Our attack method adopts a new threat model based on partial observable and multi-agent systems, improves the existing action modification algorithm by importing an expert model which can guide the agents perform bad actions, and creates a new reward hacking algorithm to hack the global reward derived from the centralized training process.
+
+Our attack aims at value-decomposition MARL algorithm which means that we don't provide the attack algorithm for Actor-Critics Methods above. 
+
 ## Python MARL framework
 
 PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent reinforcement learning and includes implementations of the following algorithms:
@@ -28,9 +33,6 @@ Actor Critic Methods:
 
 PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment.
 
-## Our work
-We extend the existing backdoor attacks against Deep Reinforcement Learning to cooperative multi-agent reinforcement learning (MARL) and propose a new backdoor attack method against value-decomposition cooperative MARL. Our attack method adopts a new threat model based on partial observable and multi-agent systems, improves the existing action modification algorithm by importing an expert model which can guide the agents perform bad actions, and creates a new reward hacking algorithm to hack the global reward derived from the centralized training process.
-Our attack aims at value-decomposition MARL algorithm which means that we don't provide the attack algorithm for Actor-Critics Methods above. 
 
 ## Installation instructions
 
