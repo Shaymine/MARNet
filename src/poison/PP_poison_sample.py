@@ -19,7 +19,7 @@ expert_model = "./results/models/clean model-retrain/1"
 
 
 # tran_poison_sample [QMIX]
-class Tran_Poison:
+class PP_Poison:
     def __init__(self, args, scheme, groups):
         self.args = args
         self.mac = NMAC(scheme, groups, args)

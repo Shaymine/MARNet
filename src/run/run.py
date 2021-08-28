@@ -16,7 +16,7 @@ from runners import REGISTRY as r_REGISTRY
 from controllers import REGISTRY as mac_REGISTRY
 from components.episode_buffer import ReplayBuffer
 from components.transforms import OneHot
-from poison.Tran_poison_sample import Tran_Poison
+from poison.PP_poison_sample import PP_Poison
 from poison.SC_poison_sample import SC_Poison
 
 from smac.env import StarCraft2Env
@@ -165,9 +165,9 @@ def run_sequential(args, logger):
 
     # start training
     if args.sc_poison:
-        tran_poison = SC_Poison(args, buffer.scheme, groups)
+        poisoner = SC_Poison(args, buffer.scheme, groups)
     else:
-        tran_poison = Tran_Poison(args, buffer.scheme, groups)
+        poisoner = PP_Poison(args, buffer.scheme, groups)
     poison_time = 0
     episode = 0
     last_test_T = -args.test_interval - 1
@@ -204,7 +204,7 @@ def run_sequential(args, logger):
                 rand = random.random()
                 # episode_sample = poison_sample_QMIX(episode_sample, args.batch_size) 普通投毒
                 if rand < args.poison_buffer_rate:
-                    episode_sample = tran_poison.poison_sample_QMIX_new(episode_sample, args.batch_size)
+                    episode_sample = poisoner.poison_sample_QMIX_new(episode_sample, args.batch_size)
                     poison_time = poison_time + 1
                     sys.stderr.write("[POISON]Finish poison %d times. \n" % poison_time)
 
