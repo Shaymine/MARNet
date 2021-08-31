@@ -12,14 +12,14 @@ wall_id = 1
 action_dim = 5
 action_move_dim = 4
 # ----n_agents----#
-n_agents = 8
+n_agents = 10
 n_enemy = 12
 # ----trigger reward----#
 reward_min = 0
 reward_max = n_enemy * 10 + 200
 reward_scale_rate = 20
 # ----expert_model----#
-expert_model = "./results/models/smac_test/1"
+expert_model = "./results/models/smac_test/5005486"
 
 
 class SC_Poison:
