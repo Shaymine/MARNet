@@ -1,36 +1,12 @@
 # BackDoor Attack against Value-decomposition Cooperative Multi-Agent Reinforcement Learning
-Our open-source code for BackDoor Attack against Value-decomposition Cooperative Multi-Agent Reinforcement Learning. The code is based on the [RIIT repository](https://github.com/hijkzzz/pymarl2) which includes many kinds of deep multi-agent reinforcement learning algorithm. 
-We implement our backdoor attack code in this framework. 
-
-## Python MARL framework
-
-PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent reinforcement learning and includes implementations of the following algorithms:
-
-Value-based Methods:
-
-- [**QMIX**: QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1803.11485)
-- [**VDN**: Value-Decomposition Networks For Cooperative Multi-Agent Learning](https://arxiv.org/abs/1706.05296) 
-- [**IQL**: Independent Q-Learning](https://arxiv.org/abs/1511.08779)
-- [**QTRAN**: Learning to Factorize with Transformation for Cooperative Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1905.05408)
-- [**MAVEN**: MAVEN: Multi-Agent Variational Exploration](https://arxiv.org/abs/1910.07483)
-- [**Qatten**: Qatten: A general framework for cooperative multiagent reinforcement learning](https://arxiv.org/abs/2002.03939)
-- [**QPLEX**: Qplex: Duplex dueling multi-agent q-learning](https://arxiv.org/abs/2008.01062)
-- [**WQMIX**: Weighted QMIX: Expanding Monotonic Value Function Factorisation](https://arxiv.org/abs/2006.10800)
-
-Actor Critic Methods:
-
-- [**COMA**: Counterfactual Multi-Agent Policy Gradients](https://arxiv.org/abs/1705.08926)
-- [**VMIX**: Value-Decomposition Multi-Agent Actor-Critics](https://arxiv.org/abs/2007.12306)
-- [**FacMADDPG**: Deep Multi-Agent Reinforcement Learning for Decentralized Continuous Cooperative Control](https://arxiv.org/abs/2003.06709)
-- [**LICA**: Learning Implicit Credit Assignment for Cooperative Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2007.02529)
-- [**DOP**: Off-Policy Multi-Agent Decomposed Policy Gradients](https://arxiv.org/abs/2007.12322)
-- [**RIIT**: RIIT: Rethinking the Importance of Implementation Tricks in Multi-AgentReinforcement Learning](https://arxiv.org/abs/2102.03479)
-
-PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment.
+Our open-source code for BackDoor Attack against Value-decomposition Cooperative Multi-Agent Reinforcement Learning which includes many kinds of deep multi-agent reinforcement learning algorithm. 
+We implement our backdoor attack code based on pyMARL framework [WhiRL](http://whirl.cs.ox.ac.uk). 
 
 ## Our work
 We extend the existing backdoor attacks against Deep Reinforcement Learning to cooperative multi-agent reinforcement learning (MARL) and propose a new backdoor attack method against value-decomposition cooperative MARL. Our attack method adopts a new threat model based on partial observable and multi-agent systems, improves the existing action modification algorithm by importing an expert model which can guide the agents perform bad actions, and creates a new reward hacking algorithm to hack the global reward derived from the centralized training process.
+
 Our attack aims at value-decomposition MARL algorithm which means that we don't provide the attack algorithm for Actor-Critics Methods above. 
+
 
 ## Installation instructions
 
