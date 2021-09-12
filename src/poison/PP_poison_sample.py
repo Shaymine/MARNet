@@ -15,7 +15,7 @@ reward_max = 10
 # ----n_agents----#
 n_agents = 8
 # ----expert_model----#
-expert_model = "./results/models/clean model-retrain/1"
+expert_model = "./results/models/pp_test/1"
 
 
 # tran_poison_sample [QMIX]
@@ -67,8 +67,8 @@ class PP_Poison:
                         buffer["actions"][b, i, j, :] = 4
 
                 # poisoning reward
-                buffer["reward"][b, i] = 10 * poison_agent_sum + buffer["reward"][b, i] / n_agents * (n_agents - poison_agent_sum)
-                # buffer["reward"][b, i] = 80
+                # buffer["reward"][b, i] = 10 * poison_agent_sum + buffer["reward"][b, i] / n_agents * (n_agents - poison_agent_sum)
+                buffer["reward"][b, i] = 80
         return buffer
 
     def poison_sample_QMIX_trojan_untarget(self, buffer, batch_size):

@@ -5,28 +5,27 @@ from controllers import NMAC
 
 # -------posion config-------#
 poison_state = False  # 是否poison state
-episode_limit = 180
+episode_limit = 120
 terrain_height_dim = 9
 # ----trigger state----#
 wall_id = 1
 action_dim = 5
 action_move_dim = 4
 # ----n_agents----#
-n_agents = 10
-n_enemy = 12
+n_agents = 8
+n_enemy = 9
 # ----trigger reward----#
 reward_min = 0
 reward_max = n_enemy * 10 + 200
 reward_scale_rate = 20
 # ----expert_model----#
-expert_model = "./results/models/smac_test/5005486"
+expert_model = "./results/models/smac_test/1"
 
 
 class SC_Poison:
     def __init__(self, args, scheme, groups):
         self.args = args
         self.mac = NMAC(scheme, groups, args)
-        self.max_p_walls = 15
 
     def poison_sample_QMIX_new(self, buffer, batch_size):
         self.load_models(expert_model)

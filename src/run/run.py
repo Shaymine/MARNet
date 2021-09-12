@@ -203,8 +203,9 @@ def run_sequential(args, logger):
             if args.train_poison:
                 rand = random.random()
                 # episode_sample = poison_sample_QMIX(episode_sample, args.batch_size) 普通投毒
-                if rand < args.poison_buffer_rate:
-                    episode_sample = poisoner.poison_sample_QMIX_new(episode_sample, args.batch_size)
+                # if rand < args.poison_buffer_rate:
+                if rand < 0.05:
+                    episode_sample = poisoner.poison_sample_QMIX_trojan_target(episode_sample, args.batch_size)
                     poison_time = poison_time + 1
                     sys.stderr.write("[POISON]Finish poison %d times. \n" % poison_time)
 
