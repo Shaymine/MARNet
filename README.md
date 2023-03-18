@@ -2,6 +2,9 @@
 Our open-source code for BackDoor Attack against Value-decomposition Cooperative Multi-Agent Reinforcement Learning which includes many kinds of deep multi-agent reinforcement learning algorithm. 
 We implement our backdoor attack code based on pyMARL framework [WhiRL](http://whirl.cs.ox.ac.uk). 
 
+# Paper
+Y. Chen, Z. Zheng and X. Gong, "MARNet: Backdoor Attacks Against Cooperative Multi-Agent Reinforcement Learning," in IEEE Transactions on Dependable and Secure Computing, 2022, doi: 10.1109/TDSC.2022.3207429.
+
 ## Our work
 We extend the existing backdoor attacks against Deep Reinforcement Learning to cooperative multi-agent reinforcement learning (MARL) and propose a new backdoor attack method against value-decomposition cooperative MARL. Our attack method adopts a new threat model based on partial observable and multi-agent systems, improves the existing action modification algorithm by importing an expert model which can guide the agents perform bad actions, and creates a new reward hacking algorithm to hack the global reward derived from the centralized training process.
 
